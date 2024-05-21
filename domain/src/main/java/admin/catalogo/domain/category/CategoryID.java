@@ -3,7 +3,6 @@ package admin.catalogo.domain.category;
 
 import admin.catalogo.domain.Identifier;
 
-import javax.swing.plaf.PanelUI;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -15,15 +14,15 @@ public class CategoryID extends Identifier {
         this.value = value;
     }
 
-    public static CategoryID unique(){
+    public static CategoryID unique() {
         return CategoryID.from(UUID.randomUUID());
     }
 
-    public static CategoryID from(final String anID){
+    public static CategoryID from(final String anID) {
         return new CategoryID(anID);
     }
 
-    public static CategoryID from(final UUID anID){
+    public static CategoryID from(final UUID anID) {
         return new CategoryID(anID.toString().toLowerCase());
     }
 
